@@ -169,9 +169,9 @@ void BSPInitTask(void *pvParameters)
 	MainFocusConfig();//初始化串口用于妙算通讯
 	Referee_init();//初始化串口用于裁判系统通讯
 	
-	 #if(IMU_MODE == 1)
+	// #if(IMU_MODE == 1)
 	  IMU_Config();//初始化MPU6500
-     #endif	
+  //   #endif	
 	  memset(calibuff,0,sizeof(calibuff));
 	  STMFLASH_Read(ADDR_FLASH_SECTOR_7,calibuff,sizeof(calibuff)/sizeof(calibuff[0]));
 	
