@@ -1,7 +1,7 @@
 ..\obj\basicperipherals.o: ..\BSP\BasicPeripherals.c
 ..\obj\basicperipherals.o: ..\USER\stm32f4xx.h
 ..\obj\basicperipherals.o: ..\CORE\core_cm4.h
-..\obj\basicperipherals.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\basicperipherals.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\basicperipherals.o: ..\CORE\core_cmInstr.h
 ..\obj\basicperipherals.o: ..\CORE\core_cmFunc.h
 ..\obj\basicperipherals.o: ..\CORE\core_cm4_simd.h
@@ -39,7 +39,7 @@
 ..\obj\basicperipherals.o: ..\BSP\BasicPeripherals.h
 ..\obj\basicperipherals.o: ..\SYSTEM\sys\sys.h
 ..\obj\basicperipherals.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\basicperipherals.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\basicperipherals.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\basicperipherals.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\basicperipherals.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\basicperipherals.o: ..\FreeRTOS\include\portable.h

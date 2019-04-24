@@ -68,6 +68,7 @@
 #define configUSE_APPLICATION_TASK_TAG	0
 #define configUSE_COUNTING_SEMAPHORES	1
 
+
 #define configUSE_STATS_FORMATTING_FUNCTIONS   1
 #define configGENERATE_RUN_TIME_STATS 1
 #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()  ConfigureTimeForTimeStats()             
@@ -92,6 +93,8 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend			1
 #define INCLUDE_vTaskDelayUntil			1
 #define INCLUDE_vTaskDelay				1
+
+#define INCLUDE_xTaskGetHandle
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS

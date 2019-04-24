@@ -34,6 +34,7 @@
 #include "RemotDbus.h"
 #include "string.h"
 #include "Auto_attackTask.h"
+#include "detect_task.h"
  
 
 /** @addtogroup Template_Project
@@ -210,6 +211,60 @@ void DMA2_Stream5_IRQHandler(void)
 	
 	DMA_ClearFlag(DMA2_Stream5,DMA_FLAG_TCIF5); //clear DMA flag
 }
+
+void USART1_IRQHandler(void)
+{
+	if (USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+    {
+        USART_ReceiveData(USART1);
+    }
+    else if (USART_GetITStatus(USART1, USART_IT_IDLE) != RESET)
+	{
+		static uint16_t this_time_rx_len = 0;
+        USART_ReceiveData(USART1);
+		
+		if(DMA_GetCurrentMemoryTarget(DMA2_Stream5) == 0)
+		{
+		    //重新设置DMA
+            DMA_Cmd(DMA2_Stream5, DISABLE);
+            this_time_rx_len = SBUS_RX_BUF_NUM - DMA_GetCurrDataCounter(DMA2_Stream5);
+            DMA_SetCurrDataCounter(DMA2_Stream5, SBUS_RX_BUF_NUM);
+			DMA2_Stream5->CR |= DMA_SxCR_CT;
+			//清DMA中断标志
+            DMA_ClearFlag(DMA2_Stream5, DMA_FLAG_TCIF5 | DMA_FLAG_HTIF5);
+            DMA_Cmd(DMA2_Stream5, ENABLE);
+		   if(this_time_rx_len == RC_FRAME_LENGTH)
+            {
+                //处理遥控器数据
+                SBUS_TO_RC(sbus_rx_buffer[0], &rc_ctrl);  
+                //记录数据接收时间
+                DetectHook(DBUSTOE);
+            }			
+		}
+		else
+        {
+            //重新设置DMA
+            DMA_Cmd(DMA2_Stream5, DISABLE);
+            this_time_rx_len = SBUS_RX_BUF_NUM - DMA_GetCurrDataCounter(DMA2_Stream5);
+            DMA_SetCurrDataCounter(DMA2_Stream5, SBUS_RX_BUF_NUM);
+            DMA2_Stream5->CR &= ~(DMA_SxCR_CT);
+            //清DMA中断标志
+            DMA_ClearFlag(DMA2_Stream5, DMA_FLAG_TCIF5 | DMA_FLAG_HTIF5);
+            DMA_Cmd(DMA2_Stream5, ENABLE);
+            if(this_time_rx_len == RC_FRAME_LENGTH)
+            {
+                //处理遥控器数据
+                SBUS_TO_RC(sbus_rx_buffer[1], &rc_ctrl);
+                //记录数据接收时间
+                DetectHook(DBUSTOE);
+            }
+        }
+		
+	}
+   
+}
+
+
 
 
 

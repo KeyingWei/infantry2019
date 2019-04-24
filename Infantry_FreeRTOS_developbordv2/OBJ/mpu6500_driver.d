@@ -2,7 +2,7 @@
 ..\obj\mpu6500_driver.o: ..\IMU\MPU6500_driver.h
 ..\obj\mpu6500_driver.o: ..\USER\stm32f4xx.h
 ..\obj\mpu6500_driver.o: ..\CORE\core_cm4.h
-..\obj\mpu6500_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\mpu6500_driver.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\mpu6500_driver.o: ..\CORE\core_cmInstr.h
 ..\obj\mpu6500_driver.o: ..\CORE\core_cmFunc.h
 ..\obj\mpu6500_driver.o: ..\CORE\core_cm4_simd.h
@@ -44,12 +44,12 @@
 ..\obj\mpu6500_driver.o: ..\SYSTEM\delay\delay.h
 ..\obj\mpu6500_driver.o: ..\IMU\IST8310_reg.h
 ..\obj\mpu6500_driver.o: ..\SYSTEM\usart\usart.h
-..\obj\mpu6500_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\mpu6500_driver.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\mpu6500_driver.o: ..\USER\InfantryConfig.h
 ..\obj\mpu6500_driver.o: ..\USER\pid_modify.h
 ..\obj\mpu6500_driver.o: ..\FreeRTOSTask\freertostask.h
 ..\obj\mpu6500_driver.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\mpu6500_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\mpu6500_driver.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\mpu6500_driver.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\mpu6500_driver.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\mpu6500_driver.o: ..\FreeRTOS\include\portable.h

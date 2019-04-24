@@ -5,6 +5,14 @@
 #include "freertostask.h"
 
 
+#define SPI5_RX_NVIC 6
+#define TIM3_NVIC 7
+#define TIM6_NVIC 6
+#define MPU_INT_NVIC 7
+
+#define Latitude_At_ShenZhen 22.57025f
+
+
 #define ENCODER_MIDDLE       (23L * 180L)
 #define ENCODER_PER_DEGREE   (8192L/360L)
 #define USART_FOR_PRINT 2L    //设置串口打印使用的串口，2 --uart2  3 --uart3  other--uart6

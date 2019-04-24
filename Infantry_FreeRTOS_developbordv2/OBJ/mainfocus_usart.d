@@ -3,7 +3,7 @@
 ..\obj\mainfocus_usart.o: ..\SYSTEM\sys\sys.h
 ..\obj\mainfocus_usart.o: ..\USER\stm32f4xx.h
 ..\obj\mainfocus_usart.o: ..\CORE\core_cm4.h
-..\obj\mainfocus_usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\mainfocus_usart.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\mainfocus_usart.o: ..\CORE\core_cmInstr.h
 ..\obj\mainfocus_usart.o: ..\CORE\core_cmFunc.h
 ..\obj\mainfocus_usart.o: ..\CORE\core_cm4_simd.h

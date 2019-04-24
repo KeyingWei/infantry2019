@@ -3,45 +3,191 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: μVision V5.26.2.0
-Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information:  week 89260, ef, LIC=21EQD-8FG7M-FI152-94VGH-0GQ98-RF7F1
+IDE-Version: μVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: efdfs wky, sfs, LIC=QF830-BL30K-MMM9I-TR03X-6WJZV-7E21K
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 6 (build 750)
-Assembler:       Armasm.exe V5.06 update 6 (build 750)
-Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
-Library Manager: ArmAr.exe V5.06 update 6 (build 750)
-Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
-CPU DLL:         SARMCM3.DLL V5.26.2.0
-Dialog DLL:      DCM.DLL V1.17.2.0
-Target DLL:      Segger\JL2CM3.dll V2.99.31.0
-Dialog DLL:      TCM.DLL V1.36.1.0
+Toolchain:       MDK-ARM Plus  Version: 5.23
+Toolchain Path:  D:\Software\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DCM.DLL V1.15.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
-D:\RMDownload\Infetry_New\Infantry_FreeRTOS_developbordv2\USER\CAN.uvprojx
-Project File Date:  12/23/2018
+D:\RMDownload\infantry2019\Infantry_FreeRTOS_developbordv2\USER\CAN.uvprojx
+Project File Date:  04/11/2019
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Infatry_V2'
-"..\OBJ\CAN.axf" - 0 Error(s), 0 Warning(s).
-
-<h2>Software Packages used:</h2>
-
-Package Vendor: Keil
-                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
-                Keil.STM32F4xx_DFP.2.13.0
-                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Software\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Infatry_V2'
+compiling pid.c...
+compiling RemotDbus.c...
+compiling pid_modify.c...
+compiling FrictionMoterPWM.c...
+compiling stm32f4xx_it.c...
+compiling system_stm32f4xx.c...
+compiling MotorCAN.c...
+compiling BasicPeripherals.c...
+compiling main.c...
+compiling stmflash.c...
+compiling MainFocus_Usart.c...
+compiling Referee.c...
+compiling power_ctrl.c...
+compiling timer.c...
+compiling freertostask.c...
+..\FreeRTOSTask\freertostask.c(55): warning:  #177-D: function "DbusParseTask"  was declared but never referenced
+  static void DbusParseTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(56): warning:  #177-D: function "start_task"  was declared but never referenced
+  static void start_task(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(57): warning:  #177-D: function "FrictionCaliTask"  was declared but never referenced
+  static void FrictionCaliTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(58): warning:  #177-D: function "FrictionControlTask"  was declared but never referenced
+  static void FrictionControlTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(60): warning:  #177-D: function "Can2ReceiveTask"  was declared but never referenced
+  static void Can2ReceiveTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(61): warning:  #177-D: function "IMUReceiveTask"  was declared but never referenced
+  static void IMUReceiveTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(62): warning:  #177-D: function "BSPInitTask"  was declared but never referenced
+  static void BSPInitTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(63): warning:  #177-D: function "PIDCalculateTask"  was declared but never referenced
+  static void PIDCalculateTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(64): warning:  #177-D: function "ChassisControlTask"  was declared but never referenced
+  static void ChassisControlTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(65): warning:  #177-D: function "GimbalControlTask"  was declared but never referenced
+  static void GimbalControlTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(66): warning:  #177-D: function "ImuGimbalCaliTask"  was declared but never referenced
+  static void  ImuGimbalCaliTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(67): warning:  #177-D: function "OfflineDetectedTask"  was declared but never referenced
+  static void OfflineDetectedTask(void *pvParameters);
+..\FreeRTOSTask\freertostask.c(68): warning:  #177-D: function "SetFireFre"  was declared but never referenced
+  static void SetFireFre(int16_t fre);
+..\FreeRTOSTask\freertostask.c: 13 warnings, 0 errors
+compiling spi.c...
+compiling adc.c...
+assembling startup_stm32f427_437xx.s...
+compiling sys.c...
+compiling imu_int.c...
+compiling Auto_attackTask.c...
+compiling delay.c...
+compiling imu.c...
+compiling usart.c...
+compiling MPU6500_driver.c...
+..\IMU\MPU6500_driver.c(22): warning:  #223-D: function "SPI5_ReadWriteByte" declared implicitly
+    SPI5_ReadWriteByte(MPU_Tx);
+..\IMU\MPU6500_driver.c(37): warning:  #223-D: function "SPI5_ReadWriteByte" declared implicitly
+    SPI5_ReadWriteByte(MPU_Tx);
+..\IMU\MPU6500_driver.c(47): warning:  #223-D: function "SPI5_ReadWriteByte" declared implicitly
+    MPU_Rx=SPI5_ReadWriteByte(MPU_Tx);
+..\IMU\MPU6500_driver.c(239): warning:  #223-D: function "SPI5_ReadWriteByte" declared implicitly
+  	SPI5_ReadWriteByte(MPU6500_ACCEL_XOUT_H|0x80);
+..\IMU\MPU6500_driver.c: 4 warnings, 0 errors
+compiling misc.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_tim.c...
+compiling heap_4.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling stm32f4xx_spi.c...
+compiling list.c...
+compiling port.c...
+compiling queue.c...
+compiling stream_buffer.c...
+compiling timers.c...
+compiling tasks.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_exti.c...
+compiling AHRS_middleware.c...
+..\AHRS\AHRS_middleware.c(20): error:  #5: cannot open source input file "arm_math.h": No such file or directory
+  #include "arm_math.h"
+..\AHRS\AHRS_middleware.c: 0 warnings, 1 error
+compiling stm32f4xx_iwdg.c...
+compiling ist8310driver.c...
+compiling mpu6500driver.c...
+compiling start_task.c...
+compiling ist8310driver_middleware.c...
+compiling mpu6500driver_middleware.c...
+compiling INS_Task.c...
+..\MyTask\INS_Task.c(56): warning:  #177-D: variable "INSTask_Local_Handler"  was declared but never referenced
+  static TaskHandle_t INSTask_Local_Handler;
+..\MyTask\INS_Task.c(61): warning:  #177-D: variable "mpu6500_spi_DMA_txbuf"  was declared but never referenced
+  static const uint8_t mpu6500_spi_DMA_txbuf[DMA_RX_NUM] =
+..\MyTask\INS_Task.c(76): warning:  #177-D: function "IMU_Cali_Slove"  was declared but never referenced
+  static void IMU_Cali_Slove(fp32 gyro[3], fp32 accel[3], fp32 mag[3], mpu6500_real_data_t *mpu6500, ist8310_real_data_t *ist8310);
+..\MyTask\INS_Task.c(77): warning:  #177-D: function "IMU_temp_Control"  was declared but never referenced
+  static void IMU_temp_Control(fp32 temp);
+..\MyTask\INS_Task.c(79): warning:  #177-D: variable "mpu6500_spi_rxbuf"  was declared but never referenced
+  static uint8_t mpu6500_spi_rxbuf[DMA_RX_NUM]; //保存接收的原始数据
+..\MyTask\INS_Task.c(80): warning:  #177-D: variable "mpu6500_real_data"  was declared but never referenced
+  static mpu6500_real_data_t mpu6500_real_data; //转换成国际单位的MPU6500数据
+..\MyTask\INS_Task.c(81): warning:  #177-D: variable "Gyro_Scale_Factor"  was declared but never referenced
+  static fp32 Gyro_Scale_Factor[3][3] = {IMU_BOARD_INSTALL_SPIN_MATRIX}; //陀螺仪校准线性度
+..\MyTask\INS_Task.c(82): warning:  #550-D: variable "gyro_cali_offset"  was set but never used
+  static fp32 gyro_cali_offset[3] ={0.0f, 0.0f, 0.0f};
+..\MyTask\INS_Task.c(83): warning:  #177-D: variable "Gyro_Offset"  was declared but never referenced
+  static fp32 Gyro_Offset[3] = {0.0f, 0.0f, 0.0f};            //陀螺仪零漂
+..\MyTask\INS_Task.c(84): warning:  #177-D: variable "Accel_Scale_Factor"  was declared but never referenced
+  static fp32 Accel_Scale_Factor[3][3] = {IMU_BOARD_INSTALL_SPIN_MATRIX}; //加速度校准线性度
+..\MyTask\INS_Task.c(85): warning:  #177-D: variable "Accel_Offset"  was declared but never referenced
+  static fp32 Accel_Offset[3] = {0.0f, 0.0f, 0.0f};            //加速度零漂
+..\MyTask\INS_Task.c(86): warning:  #177-D: variable "ist8310_real_data"  was declared but never referenced
+  static ist8310_real_data_t ist8310_real_data;                //转换成国际单位的IST8310数据
+..\MyTask\INS_Task.c(87): warning:  #177-D: variable "Mag_Scale_Factor"  was declared but never referenced
+  static fp32 Mag_Scale_Factor[3][3] = {{1.0f, 0.0f, 0.0f},
+..\MyTask\INS_Task.c(90): warning:  #177-D: variable "Mag_Offset"  was declared but never referenced
+  static fp32 Mag_Offset[3] = {0.0f, 0.0f, 0.0f};            //磁力计零漂
+..\MyTask\INS_Task.c(91): warning:  #177-D: variable "TimingTime"  was declared but never referenced
+  static const float TimingTime = INS_DELTA_TICK * 0.001f;   //任务运行的时间 单位 s
+..\MyTask\INS_Task.c(93): warning:  #177-D: variable "INS_gyro"  was declared but never referenced
+  static fp32 INS_gyro[3] = {0.0f, 0.0f, 0.0f};
+..\MyTask\INS_Task.c(94): warning:  #177-D: variable "INS_accel"  was declared but never referenced
+  static fp32 INS_accel[3] = {0.0f, 0.0f, 0.0f};
+..\MyTask\INS_Task.c(95): warning:  #177-D: variable "INS_mag"  was declared but never referenced
+  static fp32 INS_mag[3] = {0.0f, 0.0f, 0.0f};
+..\MyTask\INS_Task.c(97): warning:  #177-D: variable "INS_Angle"  was declared but never referenced
+  static fp32 INS_Angle[3] = {0.0f, 0.0f, 0.0f};      //欧拉角 单位 rad
+..\MyTask\INS_Task.c(98): warning:  #177-D: variable "INS_quat"  was declared but never referenced
+  static fp32 INS_quat[4] = {0.0f, 0.0f, 0.0f, 0.0f}; //四元数
+..\MyTask\INS_Task.c(100): warning:  #177-D: variable "imuTempPID"  was declared but never referenced
+  static const fp32 imuTempPID[3] = {MPU6500_TEMPERATURE_PID_KP, MPU6500_TEMPERATURE_PID_KI, MPU6500_TEMPERATURE_PID_KD};
+..\MyTask\INS_Task.c(101): warning:  #177-D: variable "imuTempPid"  was declared but never referenced
+  static PidTypeDef imuTempPid;
+..\MyTask\INS_Task.c(103): warning:  #177-D: variable "first_temperate"  was declared but never referenced
+  static uint8_t first_temperate = 0;
+..\MyTask\INS_Task.c: 23 warnings, 0 errors
+compiling detect_task.c...
+compiling calibrate_task.c...
+..\MyTask\calibrate_task.c(315): warning:  #223-D: function "INS_set_cali_gyro" declared implicitly
+          
+yro_set_cali(local_cali_t->scale, local_cali_t->offset);
+..\MyTask\calibrate_task.c(321): warning:  #223-D: function "INS_cali_gyro" declared implicitly
+          
+yro_cali_fun(local_cali_t->scale, local_cali_t->offset, &count_time);
+..\MyTask\calibrate_task.c(344): warning:  #223-D: function "set_cali_gimbal_hook" declared implicitly
+          set_cali_gimbal_hook(local_cali_t->yaw_offset, local_cali_t->pitch_offset,
+..\MyTask\calibrate_task.c(351): warning:  #223-D: function "cmd_cali_gimbal_hook" declared implicitly
+          if (cmd_cali_gimbal_hook(&local_cali_t->yaw_offset, &local_cali_t->pitch_offset,
+..\MyTask\calibrate_task.c: 4 warnings, 0 errors
+"..\OBJ\CAN.axf" - 1 Error(s), 44 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_Infatry_V2
-  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  D:\Software\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:16
 </pre>
 </body>
 </html>

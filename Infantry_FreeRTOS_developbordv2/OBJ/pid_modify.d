@@ -2,7 +2,7 @@
 ..\obj\pid_modify.o: pid_modify.h
 ..\obj\pid_modify.o: stm32f4xx.h
 ..\obj\pid_modify.o: ..\CORE\core_cm4.h
-..\obj\pid_modify.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\pid_modify.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\pid_modify.o: ..\CORE\core_cmInstr.h
 ..\obj\pid_modify.o: ..\CORE\core_cmFunc.h
 ..\obj\pid_modify.o: ..\CORE\core_cm4_simd.h
@@ -37,5 +37,5 @@
 ..\obj\pid_modify.o: ..\FWLIB\inc\stm32f4xx_dma2d.h
 ..\obj\pid_modify.o: ..\FWLIB\inc\stm32f4xx_fmc.h
 ..\obj\pid_modify.o: ..\FWLIB\inc\stm32f4xx_sai.h
-..\obj\pid_modify.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\pid_modify.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\pid_modify.o: ..\BSP\MotorCAN.h

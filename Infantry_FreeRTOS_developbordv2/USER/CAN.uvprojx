@@ -10,8 +10,7 @@
       <TargetName>Infatry_V2</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F427II</Device>
@@ -184,7 +183,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -325,7 +323,6 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
-            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -336,9 +333,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--C99</MiscControls>
-              <Define>STM32F427_437xx,USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32F427X,USE_STDPERIPH_DRIVER,__FPU_USED,__FPU_PRESENT,ARM_MATH_CM4,__CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\FWLIB\inc;..\BSP;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FreeRTOSTask;..\IMU;..\Task</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\FWLIB\inc;..\BSP;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FreeRTOSTask;..\IMU;..\Task;..\MyTask;..\AHRS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -402,6 +399,11 @@
               <FileType>1</FileType>
               <FilePath>.\pid_modify.c</FilePath>
             </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\pid.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -441,6 +443,31 @@
               <FileName>Referee.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Referee.c</FilePath>
+            </File>
+            <File>
+              <FileName>power_ctrl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\power_ctrl.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>exti_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\exti_init.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -501,11 +528,6 @@
               <FileName>MPU6500_driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\IMU\MPU6500_driver.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\IMU\spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -636,6 +658,66 @@
               <FileName>timers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\timers.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MyTask</GroupName>
+          <Files>
+            <File>
+              <FileName>detect_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyTask\detect_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>start_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyTask\start_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>calibrate_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyTask\calibrate_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>INS_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyTask\INS_Task.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>AHRS</GroupName>
+          <Files>
+            <File>
+              <FileName>AHRS_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AHRS\AHRS_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>ist8310driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AHRS\ist8310driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>ist8310driver_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AHRS\ist8310driver_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6500driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AHRS\mpu6500driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6500driver_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AHRS\mpu6500driver_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>AHRS.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\AHRS\AHRS.lib</FilePath>
             </File>
           </Files>
         </Group>

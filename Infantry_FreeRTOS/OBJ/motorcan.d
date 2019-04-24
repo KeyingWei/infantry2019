@@ -2,7 +2,7 @@
 ..\obj\motorcan.o: ..\BSP\MotorCAN.h
 ..\obj\motorcan.o: ..\USER\stm32f4xx.h
 ..\obj\motorcan.o: ..\CORE\core_cm4.h
-..\obj\motorcan.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\motorcan.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\motorcan.o: ..\CORE\core_cmInstr.h
 ..\obj\motorcan.o: ..\CORE\core_cmFunc.h
 ..\obj\motorcan.o: ..\CORE\core_cm4_simd.h

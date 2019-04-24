@@ -34,7 +34,7 @@ static void Beep_PWM_Config(void)
 	
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource4,GPIO_AF_TIM3);
 	
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 ;           //GPIOA8,A9
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 ;           
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;       
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;	
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;     
@@ -115,7 +115,7 @@ void TIM4_Config(void);
 void BasicPreiph_Init()
 {
 	LEDConfig();
-	Beep_PWM_Config();
+//	Beep_PWM_Config();
 	Key_init();
 	LaserConfig();
 	

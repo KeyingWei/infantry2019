@@ -162,7 +162,7 @@ void BSPInitTask(void *pvParameters)
 	int32_t calibuff[5];
 	
 	BasicPreiph_Init(); //初始化led,beep,key,laser
-    FrictionMoterPWM_Init(); //初始化摩擦轮控制pwm
+//    FrictionMoterPWM_Init(); //初始化摩擦轮控制pwm
 	RemotDbus_Init();//初始化遥控DBUS
 	uart_init(115200);//初始化打印串口
 	MoterCanInit();//初始化can1,can2
@@ -192,7 +192,7 @@ void BSPInitTask(void *pvParameters)
 				 if(start_cnt >= 40)//等待4s后IMU数据稳定
 				 {
 					 start_cnt = 0;
-					 StrartingMusic();
+					 //StrartingMusic();
 					 xTaskCreate(GimbalControlTask,"gimbalControltask",512,NULL,5,&GimbalControlTask_Handler);
 					 xTaskCreate(PIDCalculateTask, "PIDCalculateTask", 128,NULL,6,&PIDCalculateTask_Handler);
 					 vTaskDelete(NULL);					 
@@ -218,18 +218,18 @@ static void DbusParseTask(void *pvParameters)
 		RemotData.RC_onlineCnt = 0;
 		xEventGroupClearBits(OfflineDetectedEnt,(1<<1));
 	
-		   RemotData.rc.ch0 = (sbus_rx_buffer[0]| (sbus_rx_buffer[1] << 8)) & 0x07ff;
-		   RemotData.rc.ch1 = ((sbus_rx_buffer[1] >> 3) | (sbus_rx_buffer[2] << 5)) & 0x07ff; 		//!< Channel 1
-		   RemotData.rc.ch2 = ((sbus_rx_buffer[2] >> 6) | (sbus_rx_buffer[3] << 2) | (sbus_rx_buffer[4] << 10)) & 0x07ff;//!< Channel 2
-		   RemotData.rc.ch3 = ((sbus_rx_buffer[4] >> 1) | (sbus_rx_buffer[5] << 7)) & 0x07ff; //!< Channel 3
-		   RemotData.rc.s1 = ((sbus_rx_buffer[5] >> 4)& 0x000C) >> 2;															//!< Switch left
-		   RemotData.rc.s2 = ((sbus_rx_buffer[5] >> 4)& 0x0003); 																	//!< Switch right	
-		   RemotData.mousekey.x = sbus_rx_buffer[6] | (sbus_rx_buffer[7] << 8); 											//!< Mouse X axis
-		   RemotData.mousekey.y = sbus_rx_buffer[8] | (sbus_rx_buffer[9] << 8);										  //!< Mouse Y axis
-		   RemotData.mousekey.z = sbus_rx_buffer[10] | (sbus_rx_buffer[11] << 8); 										//!< Mouse Z axis
-		   RemotData.mousekey.press_l = sbus_rx_buffer[12]; 																					//!< Mouse Left Is Press ?
-		   RemotData.mousekey.press_r = sbus_rx_buffer[13]; 																					//!< Mouse Right Is Press ?
-		   RemotData.mousekey.v = sbus_rx_buffer[14] | (sbus_rx_buffer[15] << 8); 	
+//		   RemotData.rc.ch0 = (sbus_rx_buffer[0]| (sbus_rx_buffer[1] << 8)) & 0x07ff;
+//		   RemotData.rc.ch1 = ((sbus_rx_buffer[1] >> 3) | (sbus_rx_buffer[2] << 5)) & 0x07ff; 		//!< Channel 1
+//		   RemotData.rc.ch2 = ((sbus_rx_buffer[2] >> 6) | (sbus_rx_buffer[3] << 2) | (sbus_rx_buffer[4] << 10)) & 0x07ff;//!< Channel 2
+//		   RemotData.rc.ch3 = ((sbus_rx_buffer[4] >> 1) | (sbus_rx_buffer[5] << 7)) & 0x07ff; //!< Channel 3
+//		   RemotData.rc.s1 = ((sbus_rx_buffer[5] >> 4)& 0x000C) >> 2;															//!< Switch left
+//		   RemotData.rc.s2 = ((sbus_rx_buffer[5] >> 4)& 0x0003); 																	//!< Switch right	
+//		   RemotData.mousekey.x = sbus_rx_buffer[6] | (sbus_rx_buffer[7] << 8); 											//!< Mouse X axis
+//		   RemotData.mousekey.y = sbus_rx_buffer[8] | (sbus_rx_buffer[9] << 8);										  //!< Mouse Y axis
+//		   RemotData.mousekey.z = sbus_rx_buffer[10] | (sbus_rx_buffer[11] << 8); 										//!< Mouse Z axis
+//		   RemotData.mousekey.press_l = sbus_rx_buffer[12]; 																					//!< Mouse Left Is Press ?
+//		   RemotData.mousekey.press_r = sbus_rx_buffer[13]; 																					//!< Mouse Right Is Press ?
+//		   RemotData.mousekey.v = sbus_rx_buffer[14] | (sbus_rx_buffer[15] << 8); 	
 
 		
 		

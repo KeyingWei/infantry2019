@@ -2,7 +2,7 @@
 ..\obj\auto_attacktask.o: ..\Task\Auto_attackTask.h
 ..\obj\auto_attacktask.o: ..\USER\stm32f4xx.h
 ..\obj\auto_attacktask.o: ..\CORE\core_cm4.h
-..\obj\auto_attacktask.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\auto_attacktask.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\auto_attacktask.o: ..\CORE\core_cmInstr.h
 ..\obj\auto_attacktask.o: ..\CORE\core_cmFunc.h
 ..\obj\auto_attacktask.o: ..\CORE\core_cm4_simd.h
@@ -37,10 +37,10 @@
 ..\obj\auto_attacktask.o: ..\FWLIB\inc\stm32f4xx_dma2d.h
 ..\obj\auto_attacktask.o: ..\FWLIB\inc\stm32f4xx_fmc.h
 ..\obj\auto_attacktask.o: ..\FWLIB\inc\stm32f4xx_sai.h
-..\obj\auto_attacktask.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\auto_attacktask.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\auto_attacktask.o: ..\FreeRTOSTask\freertostask.h
 ..\obj\auto_attacktask.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\auto_attacktask.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\auto_attacktask.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\auto_attacktask.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\auto_attacktask.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\auto_attacktask.o: ..\FreeRTOS\include\portable.h

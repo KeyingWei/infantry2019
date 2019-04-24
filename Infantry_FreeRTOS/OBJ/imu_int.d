@@ -1,7 +1,7 @@
 ..\obj\imu_int.o: ..\IMU\imu_int.c
 ..\obj\imu_int.o: ..\USER\stm32f4xx.h
 ..\obj\imu_int.o: ..\CORE\core_cm4.h
-..\obj\imu_int.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\imu_int.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\imu_int.o: ..\CORE\core_cmInstr.h
 ..\obj\imu_int.o: ..\CORE\core_cmFunc.h
 ..\obj\imu_int.o: ..\CORE\core_cm4_simd.h

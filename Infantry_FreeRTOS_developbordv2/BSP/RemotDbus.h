@@ -1,7 +1,12 @@
 #ifndef  __REMOTDBUS_H_
 #define __REMOTDBUS_H_
 #include "stm32f4xx.h"
-;
+
+#define SBUS_RX_BUF_NUM 36u
+
+#define RC_FRAME_LENGTH 18u
+//遥控器出错数据上限
+#define RC_CHANNAL_ERROR_VALUE 700
 /* ----------------------- RC Channel Definition---------------------------- */
 #define RC_CH_VALUE_MIN ((uint16_t)364 )
 #define RC_CH_VALUE_OFFSET ((uint16_t)1024)
@@ -10,6 +15,9 @@
 #define RC_SW_UP ((uint16_t)1)
 #define RC_SW_MID ((uint16_t)3)
 #define RC_SW_DOWN ((uint16_t)2)
+#define switch_is_down(s) (s == RC_SW_DOWN)
+#define switch_is_mid(s) (s == RC_SW_MID)
+#define switch_is_up(s) (s == RC_SW_UP)
 /* ----------------------- PC Key Definition-------------------------------- */
 #define KEY_PRESSED_OFFSET_W 		 ((uint16_t)0x01<<0)
 #define KEY_PRESSED_OFFSET_S		 ((uint16_t)0x01<<1)
@@ -27,6 +35,29 @@
 #define KEY_PRESSED_OFFSET_C  		 ((uint16_t)0x01<<13)
 #define KEY_PRESSED_OFFSET_V  		 ((uint16_t)0x01<<14)
 #define KEY_PRESSED_OFFSET_B 		 ((uint16_t)0x01<<15)
+
+/* ----------------------- Data Struct ------------------------------------- */
+typedef __packed struct
+{
+        __packed struct
+        {
+                int16_t ch[5];
+                char s[2];
+        } rc;
+        __packed struct
+        {
+                int16_t x;
+                int16_t y;
+                int16_t z;
+                uint8_t press_l;
+                uint8_t press_r;
+        } mouse;
+        __packed struct
+        {
+                uint16_t v;
+        } key;
+
+} RC_ctrl_t;
 
 struct RC
 {
@@ -77,13 +108,20 @@ struct RemotDataPack
 	struct RC rc;
 	struct MouseKey mousekey;
 	u8 RC_State;
-    uint32_t	RC_onlineCnt;
+    uint16_t	RC_onlineCnt;
 };
 
 void RemotDbus_Init(void);
-extern   volatile unsigned char sbus_rx_buffer[18];
+void RC_unable(void);
+void RC_restart(uint16_t dma_buf_num);
+static int16_t RC_abs(int16_t value);
+void SBUS_TO_RC(volatile const uint8_t *sbus_buf, RC_ctrl_t *rc_ctrl);
+uint8_t RC_data_is_error(void);
+void slove_RC_lost(void);
+void slove_data_error(void);
+const RC_ctrl_t *get_remote_control_point(void);
+
+extern volatile unsigned char sbus_rx_buffer[2][SBUS_RX_BUF_NUM];
+extern  RC_ctrl_t rc_ctrl;
 
 #endif
-
-
-

@@ -2,7 +2,7 @@
 ..\obj\frictionmoterpwm.o: ..\BSP\FrictionMoterPWM.h
 ..\obj\frictionmoterpwm.o: ..\USER\stm32f4xx.h
 ..\obj\frictionmoterpwm.o: ..\CORE\core_cm4.h
-..\obj\frictionmoterpwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\frictionmoterpwm.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\frictionmoterpwm.o: ..\CORE\core_cmInstr.h
 ..\obj\frictionmoterpwm.o: ..\CORE\core_cmFunc.h
 ..\obj\frictionmoterpwm.o: ..\CORE\core_cm4_simd.h

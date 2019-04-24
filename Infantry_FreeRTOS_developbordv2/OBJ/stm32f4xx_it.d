@@ -2,7 +2,7 @@
 ..\obj\stm32f4xx_it.o: stm32f4xx_it.h
 ..\obj\stm32f4xx_it.o: stm32f4xx.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cm4.h
-..\obj\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stm32f4xx_it.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cmInstr.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cmFunc.h
 ..\obj\stm32f4xx_it.o: ..\CORE\core_cm4_simd.h
@@ -41,7 +41,7 @@
 ..\obj\stm32f4xx_it.o: ..\SYSTEM\sys\sys.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOSTask\freertostask.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\stm32f4xx_it.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\portable.h
@@ -58,5 +58,7 @@
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\event_groups.h
 ..\obj\stm32f4xx_it.o: ..\FreeRTOS\include\timers.h
 ..\obj\stm32f4xx_it.o: ..\BSP\RemotDbus.h
-..\obj\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stm32f4xx_it.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\stm32f4xx_it.o: ..\Task\Auto_attackTask.h
+..\obj\stm32f4xx_it.o: ..\MyTask\detect_task.h
+..\obj\stm32f4xx_it.o: ..\USER\main.h

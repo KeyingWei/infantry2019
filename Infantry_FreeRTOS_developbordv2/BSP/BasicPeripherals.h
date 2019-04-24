@@ -23,11 +23,25 @@
 #define BEEP_NOTE_6  2273
 #define BEEP_NOTE_7  2024
 
+extern void led_green_on(void);
+extern void led_green_off(void);
+extern void led_green_toggle(void);
+
+extern void led_red_on(void);
+extern void led_red_off(void);
+extern void led_red_toggle(void);
+
+extern void flow_led_on(uint16_t num);
+extern void flow_led_off(uint16_t num);
+extern void flow_led_toggle(uint16_t num);
+
 void BasicPreiph_Init(void);
 void StrartingMusic(void);
 void FrictionCaliMusic(void);
 void FrictionCaliTriggerMusic(void);
 void ImuCaliMusic(void);
+void buzzer_off(void);
+void buzzer_on(uint16_t psc, uint16_t pwm);
 
 #endif
 

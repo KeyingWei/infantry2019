@@ -2,7 +2,7 @@
 ..\obj\remotdbus.o: ..\BSP\RemotDbus.h
 ..\obj\remotdbus.o: ..\USER\stm32f4xx.h
 ..\obj\remotdbus.o: ..\CORE\core_cm4.h
-..\obj\remotdbus.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\remotdbus.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\remotdbus.o: ..\CORE\core_cmInstr.h
 ..\obj\remotdbus.o: ..\CORE\core_cmFunc.h
 ..\obj\remotdbus.o: ..\CORE\core_cm4_simd.h
@@ -37,3 +37,4 @@
 ..\obj\remotdbus.o: ..\FWLIB\inc\stm32f4xx_dma2d.h
 ..\obj\remotdbus.o: ..\FWLIB\inc\stm32f4xx_fmc.h
 ..\obj\remotdbus.o: ..\FWLIB\inc\stm32f4xx_sai.h
+..\obj\remotdbus.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

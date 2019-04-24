@@ -49,9 +49,9 @@ static void Beep_PWM_Config(void)
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;      
 	GPIO_Init(GPIOH,&GPIO_InitStructure);
 	
-	TIM_TimeBaseStructure.TIM_Prescaler = 90-1; 
+	TIM_TimeBaseStructure.TIM_Prescaler = 90 - 1; 
 	TIM_TimeBaseStructure.TIM_CounterMode=TIM_CounterMode_Up;
-	TIM_TimeBaseStructure.TIM_Period = 3814;  
+	TIM_TimeBaseStructure.TIM_Period = 30000 -1;  
 	TIM_TimeBaseStructure.TIM_ClockDivision=TIM_CKD_DIV1; 
 	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0x00;
 	
@@ -67,10 +67,20 @@ static void Beep_PWM_Config(void)
 	TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCNIdleState_Reset;	
 
 	TIM_OC1Init(TIM12,&TIM_OCInitStructure); 
-	
+	TIM_ARRPreloadConfig(TIM12, ENABLE);
 	
 	TIM_Cmd(TIM12,ENABLE);
 	TIM_CtrlPWMOutputs(TIM12,ENABLE);
+}
+
+void buzzer_on(uint16_t psc, uint16_t pwm)
+{
+    TIM12->PSC = psc;
+    TIM_SetCompare1(TIM12, pwm);
+}
+void buzzer_off(void)
+{
+    TIM_SetCompare1(TIM12, 0);
 }
 
 static void Key_init()
@@ -228,9 +238,42 @@ void ConfigureTimeForTimeStats()
 	TIM4_Config();//统计任务时间
 }
 
+void led_green_off(void)
+{
+    GPIO_SetBits(GPIOF, GPIO_Pin_14);
+}
+void led_green_on(void)
+{
+    GPIO_ResetBits(GPIOF, GPIO_Pin_14);
+}
+void led_green_toggle(void)
+{
+    GPIO_ToggleBits(GPIOF, GPIO_Pin_14);
+}
 
+void led_red_off(void)
+{
+    GPIO_SetBits(GPIOE, GPIO_Pin_11);
+}
+void led_red_on(void)
+{
+    GPIO_ResetBits(GPIOE, GPIO_Pin_11);
+}
+extern void led_red_toggle(void)
+{
+    GPIO_ToggleBits(GPIOE, GPIO_Pin_11);
+}
 
-
-
-
+void flow_led_on(uint16_t num)
+{
+    GPIO_ResetBits(GPIOG, GPIO_Pin_8 >> num);
+}
+void flow_led_off(uint16_t num)
+{
+    GPIO_SetBits(GPIOG, GPIO_Pin_8 >> num);
+}
+void flow_led_toggle(uint16_t num)
+{
+    GPIO_ToggleBits(GPIOG, GPIO_Pin_8 >> num);
+}
 

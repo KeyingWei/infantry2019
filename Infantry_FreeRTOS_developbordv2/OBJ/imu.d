@@ -2,7 +2,7 @@
 ..\obj\imu.o: ..\IMU\MPU6500_driver.h
 ..\obj\imu.o: ..\USER\stm32f4xx.h
 ..\obj\imu.o: ..\CORE\core_cm4.h
-..\obj\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\imu.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\imu.o: ..\CORE\core_cmInstr.h
 ..\obj\imu.o: ..\CORE\core_cmFunc.h
 ..\obj\imu.o: ..\CORE\core_cm4_simd.h
@@ -39,10 +39,10 @@
 ..\obj\imu.o: ..\FWLIB\inc\stm32f4xx_sai.h
 ..\obj\imu.o: ..\SYSTEM\sys\sys.h
 ..\obj\imu.o: ..\IMU\imu.h
-..\obj\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\imu.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\imu.o: ..\FreeRTOSTask\freertostask.h
 ..\obj\imu.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\imu.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\imu.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\imu.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\imu.o: ..\FreeRTOS\include\portable.h
@@ -57,4 +57,4 @@
 ..\obj\imu.o: ..\USER\pid_modify.h
 ..\obj\imu.o: ..\FreeRTOS\include\event_groups.h
 ..\obj\imu.o: ..\FreeRTOS\include\timers.h
-..\obj\imu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\imu.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

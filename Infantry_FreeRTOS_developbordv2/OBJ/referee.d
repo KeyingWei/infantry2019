@@ -1,10 +1,10 @@
 ..\obj\referee.o: ..\BSP\Referee.c
 ..\obj\referee.o: ..\BSP\Referee.h
-..\obj\referee.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\referee.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\referee.o: ..\SYSTEM\sys\sys.h
 ..\obj\referee.o: ..\USER\stm32f4xx.h
 ..\obj\referee.o: ..\CORE\core_cm4.h
-..\obj\referee.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\referee.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\referee.o: ..\CORE\core_cmInstr.h
 ..\obj\referee.o: ..\CORE\core_cmFunc.h
 ..\obj\referee.o: ..\CORE\core_cm4_simd.h
@@ -44,7 +44,7 @@
 ..\obj\referee.o: ..\USER\pid_modify.h
 ..\obj\referee.o: ..\FreeRTOSTask\freertostask.h
 ..\obj\referee.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\referee.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\referee.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\referee.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\referee.o: ..\FreeRTOS\include\projdefs.h
 ..\obj\referee.o: ..\FreeRTOS\include\portable.h
@@ -59,4 +59,4 @@
 ..\obj\referee.o: ..\BSP\MotorCAN.h
 ..\obj\referee.o: ..\FreeRTOS\include\event_groups.h
 ..\obj\referee.o: ..\FreeRTOS\include\timers.h
-..\obj\referee.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\referee.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

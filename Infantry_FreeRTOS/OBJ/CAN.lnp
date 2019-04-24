@@ -42,6 +42,6 @@
 "..\obj\tasks.o"
 "..\obj\timers.o"
 --strict --scatter "..\OBJ\CAN.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\OBJ\CAN.map" -o ..\OBJ\CAN.axf
